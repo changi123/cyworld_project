@@ -1,4 +1,4 @@
-package com.changi.cyworld_project.entity;
+package com.changi.record_project.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

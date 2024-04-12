@@ -1,4 +1,4 @@
-package com.changi.cyworld_project.dto;
+package com.changi.record_project.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

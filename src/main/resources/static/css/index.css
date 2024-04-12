@@ -30,11 +30,11 @@ body {
 }
 
 .logo {
-	width: 150px;
-	height: 150px;
+	width: 250px;
+	height: 250px;
 	position: absolute;
-	left: 110px;
-	top: 134px;
+	left: 60px;
+	top: 120px;
 	background-image: url(images/logo.png);
 	background-repeat: no-repeat;
 	background-size: cover;
