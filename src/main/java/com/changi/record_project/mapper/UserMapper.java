@@ -13,4 +13,8 @@ public interface UserMapper {
 	
 	User loginUser(@Param("userId") String userId,@Param("userPassword")  String userPassword);
 
+	User duplicateIdCheck(@Param("userId") String userId);
+
+	void insertUser(@Param("userId") String userId, @Param("userPassword") String userPassword);
+
 }

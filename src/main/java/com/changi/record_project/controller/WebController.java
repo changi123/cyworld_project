@@ -23,4 +23,8 @@ public class WebController {
 	public String register(Model model) {
 		return "register";
 	}
+	@GetMapping("/timeLine")
+	public String timeLine(Model model) {
+		return "timeLine";
+	}
 }

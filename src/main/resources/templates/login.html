@@ -13,9 +13,11 @@
 		<form action="">
 			<input type="text" name="username" placeholder="아이디" id ="userId" required>
 			<input type="password" name="password" placeholder="비밀번호" id ="userPassword" required>
+			<div class="errorMessage"></div>
 			<input type="submit" id="loginButton" value="로그인"> <input
 				type="button" class="back-button" value="뒤로가기"
 				onclick="history.back()">
+			
 		</form>
 	</div>
 </body>
@@ -28,12 +30,13 @@
 				}
 				$.ajax({
 					url  : "user/login",
+					type: "post",
 					data : param,
 					success : function(res){
 						if( res == 1){
-							alert("로그인 성공");
+							location.href = "/timeLine";
 						}else{
-							alert("실패");
+							$(".errorMessage").text("아이디 또는 비밀번호가 틀렸습니다.");
 						}
 					}
 				

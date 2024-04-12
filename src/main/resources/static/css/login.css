@@ -51,3 +51,10 @@ body {
 .login-container .back-button:hover {
 	background-color: #999;
 }
+
+
+.errorMessage{
+	font-size: 10px;
+	margin-bottom: 15px;
+	color: orange;
+}

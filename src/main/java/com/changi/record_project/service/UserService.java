@@ -26,6 +26,19 @@ public class UserService {
 		}
 	}
 
+	public boolean duplicateIdCheck(String userId) {
+		User user = userMapper.duplicateIdCheck(userId);
+		if( user != null) {
+			return false;
+		}else {
+			return true;
+		}
+	}
+
+	public void insertUser(String userId, String userPassword) {
+		userMapper.insertUser(userId,userPassword);
+	}
+
 
 
 }
