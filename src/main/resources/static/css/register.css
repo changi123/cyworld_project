@@ -1,0 +1,81 @@
+  body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f2f2f2;
+    }
+    .signup-container {
+        width: 300px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .signup-container h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: #333;
+    }
+    .signup-container input[type="text"],
+    .signup-container input[type="password"],
+    .signup-container input[type="email"],
+    .signup-container input[type="submit"]
+     {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-left: 10px;
+    }
+
+    .signup-container input[type="button"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+        box-sizing: border-box;
+          margin-left: 10px;
+    }
+    .signup-container input[type="submit"],
+    .signup-container input[type="button"] {
+
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-left: 10px;
+    }
+    .signup-container input[type="submit"]:hover,
+    .signup-container input[type="button"]:hover {
+        background-color: #ddd;
+        margin-left: 10px;
+    }
+    .signup-container .check-button,
+    .signup-container .send-button,
+    .signup-container .sign-button {
+        width: auto;
+        padding: 10px 15px;
+        margin-left: 10px;
+       background-color: rgba(255, 165.00000536441803, 0, 1);
+        color: #333;
+    }
+    .signup-container .check-button:hover,
+    .signup-container .send-button:hover,
+    .signup-container .sign-button:hover  {
+        background-color: #ddd;
+    }
+    
+    .signup-container .back-button {
+		background-color: #ccc;
+		color: #333;
+}
+    .signup-container .back-button:hover {
+   		background-color: #ccc;
+		color: #333;
+    }
