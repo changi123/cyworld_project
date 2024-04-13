@@ -38,6 +38,7 @@ public class WebSockChatHandler extends TextWebSocketHandler {
         ChatRoom room = chatService.findRoomById(chatMessage.getRoomId());
         Set<WebSocketSession> sessions=room.getSessions();   //방에 있는 현재 사용자 한명이 WebsocketSession
         if (chatMessage.getType().equals(ChatMessage.MessageType.ENTER)) {
+        	
             //사용자가 방에 입장하면  Enter메세지를 보내도록 해놓음.  이건 새로운사용자가 socket 연결한 것이랑은 다름.
             //socket연결은 이 메세지 보내기전에 이미 되어있는 상태
             sessions.add(session);
