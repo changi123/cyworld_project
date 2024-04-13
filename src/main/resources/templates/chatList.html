@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.create {
+	margin-bottom: 20px;
+}
+
+.create input[type="text"] {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	margin-right: 10px;
+}
+
+.create button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	background-color: #007bff;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.create button:hover {
+	background-color: #0056b3;
+}
+
+.back-button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	background-color: #ccc;
+	color: #333;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.back-button:hover {
+	background-color: #bbb;
+}
+
+.room-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 20px;
+}
+
+.room-tile {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+.room-tile:hover {
+	transform: translateY(-5px);
+}
+
+.room-name {
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<form action="/createRoom" method="post" class="create">
+			<input type="text" name="name" placeholder="채팅방 이름">
+			<button type="submit">방 만들기</button>
+		</form>
+		<input type="button" class="back-button" value="뒤로가기"
+			onclick="location.href='/timeLine'">
+		<div class="room-list">
+			<div th:each="room : ${roomList}" class="room-tile">
+				<a th:href="@{chatRoom(roomId=${room.roomId})}" class="room-name"
+					th:text="${room.name}"></a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

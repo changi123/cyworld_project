@@ -12,6 +12,8 @@ import com.changi.record_project.dto.UserDTO;
 import com.changi.record_project.entity.User;
 import com.changi.record_project.service.UserService;
 
+import jakarta.servlet.http.HttpSession;
+
 
 @RestController
 @RequestMapping("/user")
@@ -22,8 +24,8 @@ public class UserRestController {
 	
 	
 	@PostMapping("/login")
-	public int login(UserDTO userDTO) {
-		return userService.loginUser(userDTO.getUserId(),userDTO.getUserPassword()); 
+	public int login(UserDTO userDTO,HttpSession session) {
+		return userService.loginUser(userDTO.getUserId(),userDTO.getUserPassword(),session); 
 	}
 	@PostMapping("/register")
 	public int register(UserDTO userDTO) {

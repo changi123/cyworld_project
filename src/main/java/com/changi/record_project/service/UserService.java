@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import com.changi.record_project.dto.UserDTO;
 import com.changi.record_project.entity.User;
 import com.changi.record_project.mapper.UserMapper;
+
+import jakarta.servlet.http.HttpSession;
  
 
 @Service
@@ -17,9 +19,10 @@ public class UserService {
 	@Autowired
 	UserMapper userMapper;
 
-	public int loginUser(String userId, String userPassword) {
+	public int loginUser(String userId, String userPassword, HttpSession session) {
 		User user = userMapper.loginUser(userId,userPassword);
 		if( user != null) {
+			session.setAttribute("user", user);
 			return 1; 
 		}else {
 			return 0;
