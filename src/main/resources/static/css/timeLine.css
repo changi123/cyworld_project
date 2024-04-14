@@ -3,14 +3,14 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100vh;
-	display: flex;
+/* 	display: flex; */
 	justify-content: center;
 	align-items: center;
 	background-color: #f2f2f2;
 }
 /* 전체 컨테이너 스타일 */
 .e12_15 {
-	max-width: 600px;
+	max-width: 390px;
 	margin: 20px auto;
 	padding: 20px;
 	background-color: #f9f9f9;

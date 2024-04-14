@@ -1,36 +1,32 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>프로필</title>
-    <link rel="stylesheet" href="css/timeLine.css" /> <!-- timeLine.css 파일 연결 -->
-    <style>
-  
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>프로필</title>
+<link rel="stylesheet" href="css/timeLine.css" />
+<!-- timeLine.css 파일 연결 -->
+<style>
+</style>
 </head>
 <body>
 
-<div class="e12_15">
-    <span class="title">Changi123</span>
-    <div class="content-box">
-        <img src="images/logo.jpg" alt="" class="logo" />
-        <span class="content1">개발자 홍찬기</span>
-        <span class="content2">github : changi123</span>
-        <span class="content3">phone : 010-9668-1635</span>
-        <span class="content4">열정 긍정왕입니다.</span>
-    </div>
-    <div class="chat-box">
-        <a class="chat1" href="chatList">채팅방</a>
-    </div>
-    <div class="logout-box">
-        <div class="logout1"></div>
-        <span class="logout2">로그아웃</span>
-    </div>
-    <span class="record">방명록을 남겨주세요.</span>
-    <input class="record-box"/>
-    <button class="record-btn">등록</button>
-</div>
+	<div class="e12_15">
+		<span class="title">Changi123</span>
+		<div class="content-box">
+			<img src="images/logo.jpg" alt="" class="logo" /> <span
+				class="content1">개발자 홍찬기</span> <span class="content2">github
+				: changi123</span> <span class="content3">phone : 010-9668-1635</span>
+		</div>
+		<div class="chat-box">
+			<a class="chat1" href="chatList">채팅방</a>
+		</div>
+		<div class="logout-box">
+			<div class="logout1"></div>
+			<span class="logout2" onclick="location.href='/'">로그아웃</span>
+		</div>
+		<span class="record">로그인 사용자 : <span th:text="${user.userId}"></span></span>
+	</div>
 
 </body>
 </html>

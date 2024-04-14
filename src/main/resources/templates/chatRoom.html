@@ -67,7 +67,7 @@ var username = /*[[${username}]]*/
             var entermessage={"type" : "ENTER","roomId":[[${room.roomId}]],"sender":username,"message":""}; //sender는  글쓸때 수정하자.
             socket.send(JSON.stringify(entermessage));
         }
-        let socket = new WebSocket("ws://localhost:8080/ws/chat");
+        let socket = new WebSocket("ws://172.30.1.66:8080/ws/chat");
 
         socket.onopen = function (e) {
             console.log('open server!')
@@ -98,7 +98,7 @@ var username = /*[[${username}]]*/
             }else{            	
             	messageArea.append(message.sender + " : "+ message.message);
             }
-            
+			$(".content").val("");
             messageArea.append(document.createElement('br')); // 줄 바꿈을 추가
         }
 

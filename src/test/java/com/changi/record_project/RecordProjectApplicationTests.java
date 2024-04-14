@@ -1,10 +1,10 @@
-package com.changi.cyworld_project;
+package com.changi.record_project;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CyworldProjectApplicationTests {
+class RecordProjectApplicationTests {
 
 	@Test
 	void contextLoads() {
