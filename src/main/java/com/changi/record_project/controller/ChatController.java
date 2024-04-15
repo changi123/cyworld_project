@@ -37,6 +37,7 @@ public class ChatController {
         ChatRoom room = chatService.createRoom(name);
         model.addAttribute("room",room);
         model.addAttribute("username",username);
+        System.out.println(room.toString());
         return "chatRoom";  //만든사람이 채팅방 1빠로 들어가게 됩니다
     }
 
@@ -47,6 +48,7 @@ public class ChatController {
         ChatRoom room = chatService.findRoomById(roomId);
         model.addAttribute("room",room);   //현재 방에 들어오기위해서 필요한데...... 접속자 수 등등은 실시간으로 보여줘야 돼서 여기서는 못함
         model.addAttribute("username",username);
+        System.out.println(room.toString());
         return "chatRoom";
     }
 }

@@ -7,8 +7,10 @@ import org.springframework.web.socket.WebSocketSession;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.ToString;
 
 @Getter
+@ToString
 public class ChatRoom {
     private String roomId;
     private String name;
